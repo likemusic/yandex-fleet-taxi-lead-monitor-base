@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  composer:
+    image: composer:1.8
+    volumes:
+      - .:/app
+    environment:
+      - COMPOSER_AUTH=${COMPOSER_AUTH}

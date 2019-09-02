@@ -1,0 +1,33 @@
+{
+  "name": "likemusic/yandex-fleet-taxi-lead-monitor",
+  "description": "Monitor to register new leads in https://fleet.taxi.yandex.ru/. Should be runs by cron.",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "proprietary",
+  "require": {
+    "php": "^7.3",
+    "likemusic/yandex-fleet-taxi-lead-repository": "*",
+    "likemusic/yandex-fleet-taxi-client": "*"
+  },
+  "authors": [
+    {
+      "name": "Valerij Ivashchenko",
+      "email": "likemusicdev@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Likemusic\\YandexFleetTaxi\\LeadMonitor\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:likemusic/yandex-fleet-taxi-lead-repository.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:likemusic/yandex-fleet-taxi-client.git"
+    }
+  ]
+}
