@@ -54,6 +54,10 @@ class Monitor
     {
         $newLeads = $this->getNewLeads();
 
+        if (!$newLeads) {
+            return;
+        }
+
         $this->processNewLeads($newLeads);
     }
 
