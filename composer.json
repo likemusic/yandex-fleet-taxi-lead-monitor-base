@@ -1,5 +1,5 @@
 {
-  "name": "likemusic/yandex-fleet-taxi-lead-monitor",
+  "name": "likemusic/yandex-fleet-taxi-lead-monitor-base",
   "description": "Monitor to register new leads in https://fleet.taxi.yandex.ru/. Should be runs by cron.",
   "minimum-stability": "dev",
   "prefer-stable": true,
