@@ -119,7 +119,8 @@ class Monitor
         $driverId = $yandexFleetClient->createDriver($parkId, $driverPostData);
 
         $carPostData = $newLead->getCarPostData();
-        $carId = $yandexFleetClient->storeVehicles($carPostData);
+        $carData = $yandexFleetClient->storeVehicles($carPostData);
+        $carId = $carData['data']['id'];
 
         $yandexFleetClient->bindDriverWithCar($parkId, $driverId, $carId);
     }
