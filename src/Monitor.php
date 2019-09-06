@@ -69,10 +69,16 @@ class Monitor
     private function processNewLeads(array $newLeads)
     {
         $this->loginYandexFleetTaxiClient();
+        $this->visitMainPageByYandexFleetTaxiClient();
 
         foreach ($newLeads as $newLead) {
             $this->processNewLead($newLead);
         }
+    }
+
+    private function visitMainPageByYandexFleetTaxiClient()
+    {
+        $this->yandexFleetTaxiClient->getDashboardPageData();
     }
 
     private function loginYandexFleetTaxiClient()
